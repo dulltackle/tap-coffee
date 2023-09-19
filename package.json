@@ -1,29 +1,28 @@
 {
-  "name": "my-online-cookbook",
-  "version": "0.1.0",
-  "description": "A starter kit to make your own online recipe cookbook",
-  "main": "index.js",
+  "name": "tap-coffee",
+  "version": "0.7.0",
+  "description": "A landing page for tap coffee",
   "scripts": {
     "dev:css": "sass src/scss/main.scss:src/_includes/css/main.css --watch --style=compressed",
-    "dev:11ty": "eleventy --serve",
+    "dev:11ty": "npx @11ty/eleventy --serve",
     "dev": "npm-run-all --parallel dev:css dev:11ty",
     "prod:css": "sass src/scss/main.scss:src/_includes/css/main.css --style=compressed",
-    "prod:11ty": "eleventy",
+    "prod:11ty": "@11ty/eleventy",
     "build": "npm-run-all prod:css prod:11ty"
   },
-  "author": "Maël Brunet",
+  "author": "dulltackle",
   "license": "MIT",
   "devDependencies": {
-    "@11ty/eleventy": "^0.12.1",
-    "@11ty/eleventy-img": "^0.8.3",
+    "@11ty/eleventy": "^2.0.0",
+    "@11ty/eleventy-img": "^3.1.0",
     "npm-run-all": "^4.1.5",
     "sass": "^1.32.12"
   },
   "dependencies": {
-    "alpinejs": "^2.8.2"
+    "alpinejs": "^3.1.0"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/maeligg/my-online-cookbook"
+    "url": "git+https://github.com/dulltackle/tap-coffee"
   }
 }
