@@ -55,6 +55,16 @@ module.exports = (config) => {
     return value.replace(emojiRegex, "").trim();
   });
 
+  config.addFilter("toWebAddress", (value) => {
+    const nameToAddress = new Map([
+      ["咖啡", "coffee"],
+      ["气泡水", "sparkling-water"],
+      ["甜点", "sweet"],
+    ]);
+
+    return nameToAddress.has(value) ? nameToAddress.get(value) : value;
+  });
+
   config.addFilter("onlyEmoji", function (value) {
     let match = value.match(emojiRegex);
     // If the string doesn't contain any emoji, instead we output the first letter wrapped in some custom styles

@@ -12,7 +12,7 @@
         <li class="c-tags__tag c-tag__tag--selected">{{ tagItem }}</li>
       {% else %}
         <li>
-          <a class="c-tags__tag" href="/tags/{{ tagItem | noEmoji | slug }}">{{ tagItem }}</a>
+          <a class="c-tags__tag" href="/tags/{{ tagItem | noEmoji | toWebAddress | slug }}">{{ tagItem }}</a>
         </li>
       {% endif %}
     {% endfor %}
