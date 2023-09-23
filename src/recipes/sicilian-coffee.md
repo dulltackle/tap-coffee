@@ -3,9 +3,9 @@ title: 西西里咖啡
 image: /img/recipes/sicilian-coffee.webp
 tags:
   - 咖啡 ☕
-  - 冷饮 🧊
-  - 柠檬 🍋
-  - 蜂蜜 🍯
+  # - 冷饮 🧊
+  # - 柠檬 🍋
+  # - 蜂蜜 🍯
 sourceLabel: 测试
 sourceURL: https://www.xiaohongshu.com/explore/64fdba94000000001500a5e2
 servings: 1

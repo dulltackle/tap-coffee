@@ -3,8 +3,8 @@ title: 柠檬气泡水
 image: /img/recipes/orange-sparkling-water.webp
 tags:
   - 气泡水 🍹
-  - 冷饮 🧊
-  - 柠檬 🍋
+  # - 冷饮 🧊
+  # - 柠檬 🍋
 sourceLabel: 测试
 sourceURL: https://www.xiaohongshu.com/explore/64f4389f000000001e031d5a
 servings: 1
