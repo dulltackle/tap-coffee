@@ -1,16 +1,16 @@
 {
-    "items": [
-        {
-            "text": "Home",
-            "url": "/"
-        },
-        {
-            "text": "All recipes",
-            "url": "/recipes/"
-        },
-        {
-            "text": "About",
-            "url": "/about/"
-        }
-    ]
+  "items": [
+    {
+      "text": "Home",
+      "url": "/"
+    },
+    {
+      "text": "菜单",
+      "url": "/recipes/"
+    },
+    {
+      "text": "关于我们",
+      "url": "/about/"
+    }
+  ]
 }

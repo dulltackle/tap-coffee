@@ -5,7 +5,7 @@ pagination:
   alias: selectedTag
 permalink: /tags/{{ selectedTag | noEmoji | toWebAddress | slug }}/
 layout: layouts/recipes-list.njk
-allRecipesLabel: All recipes
+allRecipesLabel: 所有
 eleventyComputed:
   metaTitle: "{{ selectedTag | noEmoji | toWebAddress }}"
 ---
