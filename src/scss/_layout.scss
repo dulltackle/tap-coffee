@@ -1,16 +1,21 @@
 .l-container {
-    margin: 0 auto;
-    max-width: 1140px;
-    padding-left: 18px;
-    padding-right: 18px;
+  margin: 0 auto;
+  max-width: 1140px;
+  padding-left: 18px;
+  padding-right: 18px;
 }
 
-.l-header, .l-footer {
-    padding: 12px;
-    display: flex;
-    justify-content: space-between;
+.l-header,
+.l-footer {
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.l-header {
+  background: linear-gradient(to bottom, #ffdb70, #fff 70%);
 }
 
 .l-footer {
-    margin-top: auto;
+  margin-top: auto;
 }
