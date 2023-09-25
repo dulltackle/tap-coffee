@@ -7,6 +7,7 @@ const emojiRegex =
 module.exports = (config) => {
   config.setUseGitIgnore(false);
   config.addWatchTarget("./src/_includes/css/main.css");
+  config.addWatchTarget("./src/_includes/css/main-tailwind.css");
 
   config.addPassthroughCopy({ public: "./" });
   config.addPassthroughCopy("src/img");

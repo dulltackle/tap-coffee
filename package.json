@@ -4,11 +4,13 @@
   "description": "A landing page for tap coffee",
   "scripts": {
     "dev:css": "sass src/scss/main.scss:src/_includes/css/main.css --watch --style=compressed",
+    "dev:tailwindcss": "tailwindcss -i src/tailwindcss/main-tailwind.css -o src/_includes/css/main-tailwind.css --watch",
     "dev:11ty": "npx @11ty/eleventy --serve",
-    "dev": "npm-run-all --parallel dev:css dev:11ty",
+    "dev": "npm-run-all --parallel dev:css dev:tailwindcss dev:11ty",
     "prod:css": "sass src/scss/main.scss:src/_includes/css/main.css --style=compressed",
+    "prod:tailwindcss": "tailwindcss -i src/tailwindcss/main-tailwind.css -o src/_includes/css/main-tailwind.css --minify",
     "prod:11ty": "@11ty/eleventy",
-    "build": "npm-run-all prod:css prod:11ty"
+    "build": "npm-run-all prod:css prod:tailwindcss prod:11ty"
   },
   "author": "dulltackle",
   "license": "MIT",
@@ -17,7 +19,8 @@
     "@11ty/eleventy-img": "^3.1.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^3.0.3",
-    "sass": "^1.32.12"
+    "sass": "^1.32.12",
+    "tailwindcss": "^3.3.3"
   },
   "dependencies": {
     "alpinejs": "^3.1.0"
