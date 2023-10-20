@@ -17,29 +17,28 @@
       <meta property="og:image:alt" content="Page image for {{ title }}"/>
       <meta name="twitter:image:alt" content="Page image for {{ title }}"/>
     {% endif %}
-    <style>:root
-    {
-      --color-primary: {{site.primaryColor}}
-      ;
-      --color-secondary: {{site.secondaryColor}}
-      ;
-    }
-    {% include "css/main.css" %}
-    {% include "css/main-tailwind.css" %}
-  </style>
-  {# <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer></script> #}
-  <script src="https://cdn.staticfile.org/alpinejs/3.13.0/cdn.min.js" defer></script>
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" defer></script>
-</head>
-<body class="{{ bodyClass }}">
-  <header class="l-header">{% include "components/navigation.njk" %}</header>
-  <main>
-    {% block content %}
-      <div class="l-container">
-        <h1>{{ title }}</h1>
-        {{ content | safe }}
-      </div>
-    {% endblock content %}
-  </main>
-  <footer class="l-footer">{% include "components/footer.njk" %}</footer>
-</body></html>
+    <style>
+      :root {
+        --color-primary: {{site.primaryColor}};
+        --color-secondary: {{site.secondaryColor}};
+      }
+      {% include "css/main.css" %}
+      {% include "css/main-tailwind.css" %}
+    </style>
+    {# <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer></script> #}
+    <script src="https://cdn.staticfile.org/alpinejs/3.13.0/cdn.min.js" defer></script>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" defer></script>
+  </head>
+  <body class="{{ bodyClass }}">
+    <header class="l-header">{% include "components/navigation.njk" %}</header>
+    <main>
+      {% block content %}
+        <div class="l-container">
+          <h1>{{ title }}</h1>
+          {{ content | safe }}
+        </div>
+      {% endblock content %}
+    </main>
+    <footer class="l-footer">{% include "components/footer.njk" %}</footer>
+  </body>
+</html>
