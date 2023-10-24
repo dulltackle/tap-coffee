@@ -6,7 +6,7 @@
     "dev:css": "sass src/scss/main.scss:src/_includes/css/main.css --watch --style=compressed",
     "dev:tailwindcss": "tailwindcss -i src/tailwindcss/main-tailwind.css -o src/_includes/css/main-tailwind.css --watch",
     "dev:11ty": "npx @11ty/eleventy --serve",
-    "dev": "npm-run-all --parallel dev:css dev:tailwindcss dev:11ty",
+    "dev": "npm-run-all --parallel dev:tailwindcss dev:11ty",
     "prod:css": "sass src/scss/main.scss:src/_includes/css/main.css --style=compressed",
     "prod:tailwindcss": "tailwindcss -i src/tailwindcss/main-tailwind.css -o src/_includes/css/main-tailwind.css --minify",
     "prod:11ty": "@11ty/eleventy",
