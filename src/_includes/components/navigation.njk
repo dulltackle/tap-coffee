@@ -28,21 +28,41 @@
   </div>
 </nav>
 #}
+<div x-data>
+  <nav>
+    <ul class="flex">
+      <li>
+        <sl-icon-button name="list" label="Navigation" style="font-size: 1.8rem;" @click="$refs.navigation.show()"></sl-icon-button>
+      </li>
+      <li class="grow">
+        <a href="/" class="flex items-center justify-center h-full">
+          <span class="text-center text-xl text-white">{{site.brand}}</span></a>
+      </li>
+      <li>
+        <sl-icon-button name="search" label="Search" style="font-size: 1.8rem;"></sl-icon-button>
+      </li>
+      <li>
+        <sl-icon-button name="bag-heart" label="Shopping Bag" style="font-size: 1.8rem;"></sl-icon-button>
+      </li>
+    </ul>
+  </nav>
 
-<nav>
-  <ul class="flex">
-    <li>
-      <sl-icon-button name="list" label="Navigation" style="font-size: 1.8rem;"></sl-icon-button>
-    </li>
-    <li class="grow">
-      <a href="/" class="flex items-center justify-center h-full">
-        <span class="text-center text-xl text-white">{{site.brand}}</span></a>
-    </li>
-    <li>
-      <sl-icon-button name="search" label="Search" style="font-size: 1.8rem;"></sl-icon-button>
-    </li>
-    <li>
-      <sl-icon-button name="bag-heart" label="Shopping Bag" style="font-size: 1.8rem;"></sl-icon-button>
-    </li>
-  </ul>
-</nav>
+  <sl-drawer label="Navigation" x-ref="navigation">
+    {#
+  <sl-menu>
+    {% for navItem in nav.items %}
+      <sl-menu-item>
+        {% if navItem.url == "/" %}
+          <a href="/" class="c-nav__home">
+            <span class="c-nav__logo">{% include "icons/tap.svg" %}</span>
+            <span class="c-nav__nav-item c-nav__home-text {{ 'c-nav__nav-item--active' if page.url == '/' }}">{{ navItem.text }}</span>
+          </a>
+        {% else %}
+          <a href="{{ navItem.url }}" class="c-nav__nav-item {{ 'c-nav__nav-item--active' if page.url == navItem.url }}">{{ navItem.text }}</a>
+        {% endif %}
+      </sl-menu-item>
+    {% endfor %}
+  </sl-menu>
+   #}
+  </sl-drawer>
+</div>
