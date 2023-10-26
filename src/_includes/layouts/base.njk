@@ -34,6 +34,7 @@
   </head>
   <body class="{{ bodyClass }}">
     <header>
+      {#
       <nav>
         <ul class="flex">
           <li>
@@ -49,10 +50,11 @@
           <li>
             <sl-icon-button name="bag-heart" label="Shopping Bag" style="font-size: 1.8rem;"></sl-icon-button>
           </li>
-
-          {# <li>{% include "components/navigation.njk" %}</li> #}
         </ul>
       </nav>
+       #}
+      {% include "components/navigation.njk" %}
+
     </header>
     <main>
       {% block content %}
