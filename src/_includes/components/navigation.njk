@@ -28,11 +28,12 @@
   </div>
 </nav>
 #}
-<div x-data>
+<div x-data="{openDrawer: false}" :class="openDrawer && 'h-screen flex flex-col'">
+
   <nav>
     <ul class="flex">
       <li>
-        <sl-icon-button name="list" label="Navigation" style="font-size: 1.8rem;" @click="$refs.navigation.show()"></sl-icon-button>
+        <sl-icon-button name="list" label="Navigation" style="font-size: 1.8rem;" @click="openDrawer = !openDrawer;openDrawer ? $refs.navigation.show() : $refs.navigation.hide()"></sl-icon-button>
       </li>
       <li class="grow">
         <a href="/" class="flex items-center justify-center h-full">
@@ -47,8 +48,9 @@
     </ul>
   </nav>
 
-  <sl-drawer label="Navigation" x-ref="navigation">
-    {#
+  <div :class="openDrawer && 'grow relative'">
+    <sl-drawer label="Navigation" placement="top" class="drawer-placement-top drawer-header-actions" x-ref="navigation" no-header contained>
+      {#
   <sl-menu>
     {% for navItem in nav.items %}
       <sl-menu-item>
@@ -64,5 +66,6 @@
     {% endfor %}
   </sl-menu>
    #}
-  </sl-drawer>
+    </sl-drawer>
+  </div>
 </div>
