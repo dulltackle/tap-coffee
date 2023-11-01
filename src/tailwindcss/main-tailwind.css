@@ -1,18 +1,12 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
 
-@layer components {
-  sl-icon-button::part(base) {
-    @apply text-white;
-  }
-
-  sl-icon-button::part(base):hover,
-  sl-icon-button::part(base):focus {
-    color: blue;
-  }
-
-  sl-icon-button::part(base):active {
-    color: #960077;
-  }
+.nav-white sl-icon-button::part(base) {
+  @apply text-white;
 }
+
+.nav-black sl-icon-button::part(base) {
+  @apply text-black;
+}
+
+@tailwind utilities;
