@@ -33,8 +33,8 @@
   <nav :class="openDrawer ? 'nav-black' : 'nav-white'">
     <ul class="flex">
       <li>
-        <sl-icon-button name="list" label="NavigationOpen" style="font-size: 1.8rem;" x-show="!openDrawer" @click="openDrawer = !openDrawer;openDrawer ? $refs.navigation.show() : $refs.navigation.hide()"></sl-icon-button>
-        <sl-icon-button name="x-lg" label="NavigationClose" style="font-size: 1.8rem;" x-show="openDrawer" x-cloak @click="openDrawer = !openDrawer;openDrawer ? $refs.navigation.show() : $refs.navigation.hide()"></sl-icon-button>
+        <sl-icon-button name="list" label="NavigationOpen" style="font-size: 1.8rem;" x-show="!openDrawer" x-transition:enter.duration.500ms @click="openDrawer = !openDrawer;openDrawer ? $refs.navigation.show() : $refs.navigation.hide()"></sl-icon-button>
+        <sl-icon-button name="x-lg" label="NavigationClose" style="font-size: 1.8rem;" x-show="openDrawer" x-transition:enter.duration.500ms x-cloak @click="openDrawer = !openDrawer;openDrawer ? $refs.navigation.show() : $refs.navigation.hide()"></sl-icon-button>
       </li>
       <li class="grow">
         <a href="/" class="flex items-center justify-center h-full">
