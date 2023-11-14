@@ -2,12 +2,12 @@
   "name": "My Online Cookbook",
   "metaDescription": "The online cookbook of John Doe",
   "author": "John Doe",
-  "primaryColor": "#ffdb70",
-  "secondaryColor": "#32816e",
+  "primaryColor": "#000",
+  "secondaryColor": "#000",
   "searchLabel": "Find recipes by name, tag or ingredients",
   "searchContainsLabel": "Contains",
   "servingsLabel": "servings",
-  "ingredientsLabel": "Ingredients",
+  "ingredientsLabel": "",
   "baseURL": "https://myonlinecookbook.netlify.app",
   "brand": "蒗屋"
 }
