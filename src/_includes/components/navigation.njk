@@ -28,7 +28,7 @@
   </div>
 </nav>
 #}
-<div x-data="{openDrawer: false}" :class="openDrawer && 'fixed h-screen w-screen z-10 bg-white flex flex-col'">
+<div x-data="{openDrawer: false}" class="fixed w-screen" :class="openDrawer && 'h-screen z-10 bg-white flex flex-col'">
 
   <nav :class="openDrawer ? 'nav-black' : 'nav-white'">
     <ul class="flex">
