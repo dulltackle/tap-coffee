@@ -6,10 +6,17 @@ bodyClass: c-home
 
 {% block content %}
   {% for product in collections.langwu %}
-    {% recipeimage product.data.landingImage,
-    "",
-    product.data.title,
-    "" %}
+    <article>
+      <div class="relative -z-10">
+        {% recipeimage product.data.landingImage,
+        "",
+        product.data.title,
+        "100%" %}
+        <div class="absolute inset-1/2">
+          <p>hello</p>
+        </div>
+      </div>
+    </article>
   {% endfor %}
 {% endblock %}
 
